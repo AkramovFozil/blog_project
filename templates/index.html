@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block title %}All Posts - Blog Site{% endblock title %}
+{% block content %}
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                        aria-controls="mobile-menu" aria-expanded="false"
+                        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="hidden sm:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="/"
+                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href=" /all-posts.html"
+                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">All
+                    Posts</a>
+                <a href="/create-post.html"
+                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Create
+                    Post</a>
+                <a href="/login.html"
+                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Login</a>
+                <a href="/register.html"
+                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Register</a>
+            </div>
+
+            <!-- Mobile Notifications -->
+            <div class="border-t border-gray-200 pt-4 pb-3">
+
+                <!-- Mobile Profile Dropdown -->
+                <div class="mt-3 px-2 space-y-1">
+                    <button type="button"
+                        class="w-full bg-white rounded-lg flex items-center justify-between text-gray-700 hover:bg-gray-100 p-3"
+                        onclick="document.getElementById('mobile-profile-dropdown').classList.toggle('hidden')">
+                        <span class="text-base font-medium">Profile</span>
+                    </button>
+                    <div class="hidden mt-2 space-y-1 bg-white rounded-md shadow-lg" id="mobile-profile-dropdown">
+                        <a href="./my-profile.html"
+                            class="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100">Your Profile</a>
+                        <a href="./settings.html"
+                            class="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100">Settings</a>
+                        <form method="POST" action="/logout">
+                            <button type="submit"
+                                class="block w-full text-left px-4 py-2 text-base text-gray-700 hover:bg-gray-100">Log
+                                out</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="px-2 space-y-1">
+                    <button type="button"
+                        class="w-full bg-white rounded-lg flex items-center justify-between text-gray-700 hover:bg-gray-100 p-3"
+                        onclick="document.getElementById('mobile-notifications-dropdown').classList.toggle('hidden')">
+                        <span class="text-base font-medium">Notifications</span>
+                        <div class="relative">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                            </svg>
+                            <span
+                                class="absolute top-0 right-0 inline-flex items-center justify-center px-1 py-1 text-xs font-bold leading-none text-white bg-red-600 rounded-full"></span>
+                        </div>
+                    </button>
+                    <div class="hidden mt-2 space-y-1 bg-white rounded-md shadow-lg" id="mobile-notifications-dropdown">
+                        <a href="#" class="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100">You have 1 new
+                            notification</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-6">Followed Posts</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="./images/post-image.png" alt="Post Image" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h2 class="text-xl font-bold mb-2">Post Title 1</h2>
+                <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="text-gray-700 mb-4">By <a href="./user-profile.html"
+                        class="text-indigo-600 hover:text-indigo-800">Azizbek</a>
+                </p>
+                <a href="show-post.html" class="text-indigo-600 hover:text-indigo-800">Read More</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="./images/post-image.png" alt="Post Image" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h2 class="text-xl font-bold mb-2">Post Title 2</h2>
+                <p class="text-gray-700 mb-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+                <p class="text-gray-700 mb-4">By <a href="./user-profile.html"
+                        class="text-indigo-600 hover:text-indigo-800">Azizbek</a>
+                </p>
+                <a href="show-post.html" class="text-indigo-600 hover:text-indigo-800">Read More</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="./images/post-image.png" alt="Post Image" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h2 class="text-xl font-bold mb-2">Post Title 3</h2>
+                <p class="text-gray-700 mb-4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur.</p>
+                <p class="text-gray-700 mb-4">By <a href="./user-profile.html"
+                        class="text-indigo-600 hover:text-indigo-800">Azizbek</a>
+                </p>
+                <a href="show-post.html" class="text-indigo-600 hover:text-indigo-800">Read More</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="./images/post-image.png" alt="Post Image" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h2 class="text-xl font-bold mb-2">Post Title 4</h2>
+                <p class="text-gray-700 mb-4">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.</p>
+                <p class="text-gray-700 mb-4">By <a href="./user-profile.html"
+                        class="text-indigo-600 hover:text-indigo-800">Azizbek</a>
+                </p>
+                <a href="show-post.html" class="text-indigo-600 hover:text-indigo-800">Read More</a>
+            </div>
+        </div>
+    </main>
+
+{% endblock content %}

@@ -1,0 +1,72 @@
+Bo'lishi shart, bularsiz loyiha qabul qilinmidi:
+    Github - kamida 30 ta commit manoli va qilingan ishga bog'liq bo commit bo'lmasa va completed done degan commit bo'lsa!
+    Validation - Controller ichida yozilgan bo'lsa yoki umuman yo'q bo'lsa qabul qilinmidi!
+    Database Structure - Relationship lar mohirona ishlatilmagan bo'lsa qabul qilinmidi!
+    Clean Code - Class nomlari bachkana bo'lsa qabul qilinmidi!
+    Template - Template dagi to'liq funksiyonal bo'lmasa qabul qilinmidi!
+    Mantiq - Template dagi narsalarni Mantiqga tog'ri kelmidigan bo'lsa qabul qilinmidi!
+    Kamchilik - Loyihada Kamchilik bo'lsa qaysidur qismi bo'lmasa qabul qilinmidi!
+    Layout - Template to'liq layoutlangan bo'lmasa qabul qilinmidi!
+
+Qanday Topshirasiz:
+    Github Link Berasiz ✅
+
+Loyiha Haqida:
+    Blog Site - Odamlar kirishadi O'zlari Post joylay olishadi boshqalarni Postlarini 
+    Kuzatishadi va odamlar bir biriga obuna bo'lishi mumkun
+    Boshqalarning postlariga izoh yozishlari xam mumkun.
+
+Qilinishi kerak bo'lgan ishlar:
+Register - Name,Username,Email,Password va Avatar:
+    Username - noyob bo'lishi kerak.
+    Email - noyob bo'lishi kerak.
+    Name - min 5.
+    Avatar - faqat rasm.
+    Email ga tasdiqlash uchun link borishi kerak.
+    Password - min 6.
+
+Login - Email va Password:
+    Email tasdiqlamagan odam login qila olmasligi kerak.
+
+
+Tizimga kirgach:
+    Home Page - bu yerda tizimga kirgan odam obuna bo'lgan odamlarning postlari chiqsin.
+    All Post - bu yerda barcha odamlarning postlari chiqadi va bu yerga Royxatdan o'tgan va O'tmagan odamlar kira oladi.
+    Post Show - bu yerga Royxatdan o'tgan va O'tmagan odamlar kira oladi lekin Ro'yxatdan o'tmagan odam kirsa izoh yozish qismi bo'lmasin lekin yozilgan izohlar chiqsin
+    Create Post - bu yerga faqat Royxatdan o'tgan odam kira olsin va Post Yaratsin.
+        Post Detail:
+            Title - min 5:
+            Description - min 25:
+            Image - Faqat Rasm
+    Edit Post - bu yerga faqat Royxatdan o'tgan odam kira olsin va xarkim faqat o'zining postini yangilay olishi kerak edit ga boshqa odamlar umuman qadam xam bosmasin.
+        Post Detail:
+            Title - min 5:
+            Description - min 25:
+            Image - Faqat Rasm - eski rasm o'chib yangisi tushsin agar rasm yuklasa.
+    Delete Post - Xarkim faqat o'zining postini o'chirsin o'chganda rasm xam o'chsin storage-dan
+
+    Post Show - Agar Postning egasi o'zining postiga kirganda Edit va Delete Linklar chiqsin aks xolda chiqmasin!
+        Izoh yozish - Xarkim o'zining izohini o'chira olsin Delete link xam o'ziniki bo'lsa chiqsin!
+
+    All Posts yoki Followed Posts - By Avtor turadi Avtor ustiga bosganda Avtorning Profiliga kirsin.
+
+    Profiles - Xarkimning O'z Profile Page-i bo'ladi username orqali masalan /azizdevfull id emas username chunki username unique
+        Profile da agar odam o'zining profiliga kirsa my-profile.html kabi ko'rinadi agar boshqa odamni profileiga kirsa user-profile.html kabi.
+    
+        Profile da Folow va Unfollow ishlashi kerak Followers, Following, Posts - sonlari xisoblansin
+    
+        Users' Posts - bunda shu odamning postlari chiqadi agar o'zingiz ning profile da bo'lsangiz My Post yani o'zingizning Postlaringiz
+    
+    Notifications - 2 ta xolatda keladi: Kimdur Sizning Postingizga Izoh yozganda va Kimdur Obuna bo'lganda:
+        Obuna Notification - Yangi odam Obuna bo'lsa: Azizbek followed to you - ustiga bosganda obuna bo'lgan odamning profiliga kirishi kerak
+        Izoh Notification - Kimdur sizning Postingizga Izoh yozganda: New comment to Post Title - ustiga bosganda shu postning show qismiga kirishi kerak.
+Ui qismi:
+    Navbar:
+        Royxatdan O'tmagan Odam uchun index-without-login.html kabi bo'ladi link larigaxam axamiyat bering masalan BlogSite ustiga bosganda Royxatdan o'tmagan bo'lsa: Welcome to BlogSite! Please Log in or Sign up to view all posts. chiqadi
+        Royxatdan o'tgan bo'lsa Login va Register bo'lmasligi kerak
+    Footer:
+        facebook - o'zingizning facebook akkount link qoyilsin agar bor bo'lsa yo'q bo'lsa #
+        twitter - o'zingizning twitter akkount link qoyilsin agar bor bo'lsa yo'q bo'lsa #
+        github - o'zingizning github akkount link qoyilsin
+
+    
